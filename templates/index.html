@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title> Affair Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+</head>
+
+<body>
+  <div class="container  p-3 my-3 border">
+    <h2 style="color: blue;">Woman Affair Predictor</h2>
+    <h6>Dataset description:-
+      Rate marriage: woman's rating of her marriage (1 = very poor, 5 = very good) <br>
+      Age: woman's age <br>
+      yrs married: number of years married <br>
+      children: number of children<br>
+      religious: woman's rating of how religious she is (1 = not religious, 4 = strongly religious) <br>
+      education: level of education (9 = grade school, 12 = high school, 14 = some college, 16 = college graduate, 17 = some graduate school, 20 = advanced degree) <br>
+      occupation: woman's occupation (1 = student, 2 = farming/semi-skilled/unskilled, 3 = "white collar", 4 = teacher/nurse/writer/technician/skilled, 5 = managerial/business, 6 = professional with advanced degree) <br>
+      occupation husband: husband's occupation (same coding as above) <br> </h6>
+
+<br>
+<br>
+    <form action="/predict"method="post">
+      <div class="form-group">
+      <input min="1" max="5" type="number" class="form-control" name="rateMarriage" placeholder="rateMarriage" required="required" />
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" name="age" placeholder="age" required="required" />
+    </div>  
+    <div class="form-group">  
+    <input type="number" class="form-control" name="yearsMarried" placeholder="yearsMarried" required="required" />
+  </div>
+    <div class="form-group">   
+    <input min="0" max="5" type="number" class="form-control" name="children" placeholder="children" required="required" />
+  </div> 
+    <div class="form-group">    
+    <input min="0" max="4" type="number" class="form-control" name="religious" placeholder="religious" required="required" />
+  </div>
+    <div class="form-group">    
+    <input type="number" class="form-control" name="education" placeholder="education" required="required" />
+    </div>
+    <div class="form-group">   
+    <input type="number" class="form-control" name="occupation" placeholder="occupation" required="required" />
+  </div> 
+    <div class="form-group">   
+    <input type="number" class="form-control" name="husbandOccupation" placeholder="husbandOccupation" required="required" />
+  </div> 
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      
+    </form>
+
+
+  </div>
+</body>
+</html>
